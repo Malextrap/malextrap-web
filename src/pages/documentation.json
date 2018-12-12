@@ -1,5 +1,187 @@
 {
   "Button": {
-    "code": "<Button />"
+    "code": "<Button text={'Hello world!'} />",
+    "attributes": {
+      "text": [
+        "This attribute represents the text that is written in this button",
+        "String"
+      ],
+      "color": [
+        "This attribute represents the color of this button",
+        "String"
+      ],
+      "animated": [
+        "This attribute is for what this button be animated",
+        "Boolean"
+      ],
+      "onClick": [
+        "This function is called when you click this button",
+        "ƒ()"
+      ]
+    }
+  },
+  "Alert": {
+    "code": "<Alert color={'info'} text={'Hello world!'} />",
+    "attributes": {
+      "text": [
+        "This attribute represents the text that is written in this alert box",
+        "String"
+      ],
+      "color": [
+        "This attribute represent the color of this alert",
+        "String"
+      ],
+      "fade": [
+        "This attribute is for when the alert be spawn, this have a fade effect",
+        "Boolean"
+      ],
+      "timeout": [
+        "This attribute is for the timeout for the fade effect",
+        "Number"
+      ]
+    }
+  },
+  "Card": {
+    "code": "<Card text={['Title', 'Hello world', 'Description', 'This is a test description', 'Date', '09/09/2011 19:26']} />",
+    "attributes": {
+      "text": [
+        "This attribute is for the card content the size of the array is 5",
+        "Array"
+      ],
+      "href": [
+        "This attribute is for if you want to link the card to other page",
+        "String"
+      ],
+      "color": [
+        "This attribute is the color of this card",
+        "String"
+      ],
+      "image": [
+        "This attribute is for the card background",
+        "String"
+      ]
+    }
+  },
+  "Label": {
+    "code": "<Label text={'Hello world'} />",
+    "attributes": {
+      "text": [
+        "This attribute is for the content of this label",
+        "String"
+      ]
+    }
+  },
+  "Modal": {
+    "code": "<Modal ref={node => {this.modal = node}} text={<p>Hello world</p>} />,\n <Button onClick={() => this.modal.open()} animated color={'green'} text={'Open modal'} />",
+    "attributes": {
+      "text": [
+        "This attribute is the content for this modal",
+        "String"
+      ],
+      "open": [
+        "This is a function that opens the modal",
+        "ƒ()"
+      ],
+      "close": [
+        "This is a function that closes the modal",
+        "ƒ()"
+      ],
+      "big": [
+        "This attribute is for if you want this modal be big",
+        "Boolean"
+      ],
+      "onOpen": [
+        "This attribute is a event that be executed when the modal be loaded",
+        "ƒ()"
+      ],
+      "onClose": [
+        "This attribute is a event that be executed when the modal be closed",
+        "ƒ()"
+      ],
+      "clickLeft": [
+        "This attribute is for when you click left the modal this be closed",
+        "Boolean"
+      ]
+    }
+  },
+  "Progress": {
+    "code": "<Progress percent current={20} />",
+    "attributes": {
+      "current": [
+        "This attribute is for the current value of this progress bar",
+        "Number"
+      ],
+      "max": [
+        "This attribute is for the maximum value of this progress bar",
+        "Number"
+      ],
+      "min": [
+        "This attribute is for the minimum value of this progress bar",
+        "Number"
+      ],
+      "color": [
+        "This attribute is for the color of this progress bar",
+        "String"
+      ],
+      "percent": [
+        "This attribute is for if you want to see the percent in the tooltip of this progress bar",
+        "Boolean"
+      ]
+    }
+  },
+  "Selector": {
+    "code": "<Selector options={['Alex', 'Anna', 'Rafa']} />",
+    "attributes": {
+      "options": [
+        "This attribute is for this Selector options",
+        "Array"
+      ],
+      "color": [
+        "This attribute is for this Selector color",
+        "String"
+      ],
+      "onChange": [
+        "This attribute is a event that be executed when the selector options be changed",
+        "ƒ()"
+      ]
+    }
+  },
+  "Switcher": {
+    "code": "<Switcher dataOn={'On'} dataOff={'Off'} />",
+    "attributes": {
+      "dataOn": [
+        "This attribute is the label when the switch be on",
+        "String"
+      ],
+      "dataOff": [
+        "This attribute is tha label when the switch be off",
+        "String"
+      ],
+      "onClick": [
+        "This attribute is a event that be executed when the switch be clicked",
+        "ƒ()"
+      ],
+      "onOn": [
+        "This attribute is a event that be executed when the switch be switched to on",
+        "ƒ()"
+      ],
+      "onOff": [
+        "This attribute is a event that be executed when the switch be switched to off",
+        "ƒ()"
+      ]
+    }
+  },
+  "Tooltip": {
+    "code": "<Tooltip text={'Hello'} hidden={'world!'} />",
+    "attributes": {
+      "text": [
+        "This attribute is the text unhidden",
+        "String"
+      ],
+      "hidden": [
+        "This attribute is the text hidden for this tooltip",
+        "String"
+      ]
+    }
   }
 }
