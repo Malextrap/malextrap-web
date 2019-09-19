@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/home';
-import Components from "./pages/componenst";
+import Components from "./pages/components";
 import Documentation from "./pages/documentation";
 
 export default () =>
