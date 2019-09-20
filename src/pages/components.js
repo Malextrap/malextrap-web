@@ -73,8 +73,8 @@ class Components extends Component {
                             </table>
                         </div>
 
-                        <div style={{marginTop: "10%", paddingBottom: "10%", textAlign: "center"}} name={"example"}>
-                            <h2>Component example</h2>
+                        <div style={{marginTop: "10%", paddingBottom: "10%"}} name={"example"}>
+                            <h2 style={{textAlign: "center"}}>Component example</h2>
                             {this.renderExample(component)}
                         </div>
                     </div>
@@ -118,8 +118,9 @@ class Components extends Component {
             html.push(
                 <tr>
                     <td style={style}>{attribute}</td>
-                    <td style={style}>{key[0]}</td>
-                    <td style={style}>{key[1]}</td>
+                    {key.map(
+                        attr => <td style={style}>{attr}</td>
+                    )}
                 </tr>
             );
 
@@ -140,65 +141,57 @@ class Components extends Component {
         const has = char => {
             return Util.includesIgnoreCase(char, component.toString()) || Util.includesIgnoreCase(component.toString(), char)
         };
+        const pre = code => <pre style={{textAlign: 'center'}}>{code}</pre>;
 
-        if (has("buttons")){
+        if (has("buttons"))
             return [
-                <pre>{code}</pre>,
+                pre(code),
                 <Button animated text={'Hello world!'}/>
             ]
-        }
-        else if (has("alerts")){
+        else if (has("alerts"))
             return [
-                <pre>{code}</pre>,
+                pre(code),
                 <Alert color={"info"} text={'Hello world!'}/>
             ]
-        }
-        else if (has("cards")){
+        else if (has("cards"))
             return [
-                <pre>{code}</pre>,
+                pre(code),
                 <Card color={"red"} text={['Title', 'Hello world', 'Description', 'This is a test description', 'Date', '09/09/2011 19:26']}/>
             ]
-        }
-        else if (has("labels")){
+        else if (has("labels"))
             return [
-                <pre>{code}</pre>,
+                pre(code),
                 <Label text={'Hello world'}/>
             ]
-        }
-        else if (has("modals")){
+        else if (has("modals"))
             return [
-                <pre>{code}</pre>,
+                pre(code),
                 <Modal ref={node => {this.modal = node}} text={<p style={{color: "#7a8599"}}>Hello world</p>}/>,
                 <Button onClick={() => this.modal.open()} animated color={"green"} text={"Open modal"} />
             ]
-        }
-        else if (has("progress") || has("progressbar")){
+        else if (has("progress") || has("progressbar"))
             return [
-                <pre>{code}</pre>,
+                pre(code),
                 <Progress percent current={20}/>
             ]
-        }
-        else if (has("selectors")){
+        else if (has("selectors"))
             return [
-                <pre>{code}</pre>,
+                pre(code),
                 <Selector options={['Alex', 'Anna', 'Rafa']}/>
             ]
-        }
-        else if (has("switchers") || has("switch")){
+        else if (has("switchers") || has("switch"))
             return [
-                <pre>{code}</pre>,
+                pre(code),
                 <Switcher dataOn={'On'} dataOff={'Off'}/>
             ]
-        }
-        else if (has("tooltips")){
+        else if (has("tooltips"))
             return [
-                <pre>{code}</pre>,
+                pre(code),
                 <Tooltip text={'Hello'} hidden={'world!'}/>
             ]
-        }
     }
 
 
 }
 
-export default Components;
+export default Components

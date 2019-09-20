@@ -29,7 +29,7 @@ class Util {
      * @returns {boolean} includes?
      */
     static equalsIgnoreCase(word1, word2){
-        return word1.toUpperCase() == word2.toUpperCase()
+        return word1.toUpperCase() === word2.toUpperCase()
     }
 
 
@@ -39,7 +39,7 @@ class Util {
      * @returns {boolean}
      */
     static isEven(number){
-        return number == parseFloat(number) ? !(number % 2) : void 0
+        return number === parseFloat(number) ? !(number % 2) : void 0
     }
 
 
