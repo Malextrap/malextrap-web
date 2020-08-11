@@ -1,8 +1,8 @@
 import React from "react"
 
-import Util from "../util"
+import Util from "../../util"
 import documentation from "./documentation.json"
-import Footer from "./components/Footer"
+import Footer from "../components/Footer"
 
 export default () => {
   const css = [

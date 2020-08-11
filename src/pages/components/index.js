@@ -1,8 +1,8 @@
 import React from "react"
 
-import Util from "../util"
+import Util from "../../util"
 
-import documentation from "./documentation.json"
+import documentation from "../documentation/documentation.json"
 
 import Button from "malextrap-react/lib/Button"
 import Alert from "malextrap-react/lib/Alert"
@@ -14,7 +14,7 @@ import Selector from "malextrap-react/lib/Selector"
 import Switcher from "malextrap-react/lib/Switcher"
 import Tooltip from "malextrap-react/lib/Tooltip"
 
-import Footer from "./components/Footer"
+import Footer from "./Footer"
 
 /**
  * This function search In documentation

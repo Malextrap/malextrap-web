@@ -1,8 +1,8 @@
-import React from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
-import Home from "./pages/home";
-import Components from "./pages/components";
-import Documentation from "./pages/documentation";
+import React from "react"
+import { Switch, Route, BrowserRouter } from "react-router-dom"
+import Home from "./pages/home/"
+import Components from "./pages/components/"
+import Documentation from "./pages/documentation/"
 
 export default () => (
   <BrowserRouter>
@@ -13,4 +13,4 @@ export default () => (
       <Route component={Home} />
     </Switch>
   </BrowserRouter>
-);
+)
